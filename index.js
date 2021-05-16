@@ -5,7 +5,7 @@ module.exports = {
     'plugin:jest/style',
     'plugin:jest-dom/recommended',
     'plugin:prettier/recommended',
-    'plugin:testing-library/dom',
+    'plugin:testing-library/react',
   ],
   env: {
     commonjs: true,
@@ -161,7 +161,8 @@ module.exports = {
           ['^\\u0000'], // Side effect imports
           ['^react$', '^react-dom$', '^react', '^@?\\w'],
           ['^(src/)?modules'],
-          ['^(src/)?config', '^(src/)?actions', '^(src/)?reducers', '^(src/)?sagas'],
+          ['^(src/)?config', '^(src/)?literals'],
+          ['^(src/)?actions', '^(src/)?reducers', '^(src/)?sagas'],
           ['^(src/)?components', '^(src/)?containers', '^(src/)?routes'],
           ['^(src/)?types'],
           ['^test'],
