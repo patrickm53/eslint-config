@@ -2,18 +2,21 @@ module.exports = {
   extends: [
     'airbnb',
     'plugin:jest/recommended',
+    'plugin:jest/style',
+    'plugin:jest-dom/recommended',
     'plugin:prettier/recommended',
-    'plugin:testing-library/recommended',
+    'plugin:testing-library/dom',
   ],
   env: {
     commonjs: true,
     es6: true,
     jest: true,
+    'jest/globals': true,
     node: true,
   },
-  plugins: ['react-hooks', 'simple-import-sort', 'sort-destructure-keys'],
+  plugins: ['@babel', 'react-hooks', 'simple-import-sort', 'sort-destructure-keys'],
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2021,
     sourceType: 'module',
   },
   settings: {
@@ -22,12 +25,16 @@ module.exports = {
         extensions: ['.js', '.jxs', '.ts', '.tsx'],
         moduleDirectory: ['node_modules', './'],
       },
+      typescript: {},
     },
   },
   overrides: [
     {
       files: ['**/*.js?(x)'],
-      parser: 'babel-eslint',
+      parser: '@babel/eslint-parser',
+      parserOptions: {
+        requireConfigFile: false,
+      },
       rules: {
         'react/prop-types': 'warn',
       },
@@ -58,6 +65,7 @@ module.exports = {
         '@typescript-eslint/ban-ts-comment': 'off',
         '@typescript-eslint/no-inferrable-types': ['error', { ignoreParameters: true }],
         '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/consistent-type-assertions': 'warn',
@@ -88,6 +96,27 @@ module.exports = {
     'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
     'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 5 }],
     'no-else-return': ['error', { allowElseIf: true }],
+    'no-param-reassign': [
+      'error',
+      {
+        props: true,
+        ignorePropertyModificationsFor: [
+          'acc', // for reduce accumulators
+          'accumulator', // for reduce accumulators
+          'e', // for events
+          'event', // for events / AWS Lambdas
+          'el', // for HTMLElements
+          'element', // for HTMLElements
+          'ctx', // for Koa routing
+          'context', // for Koa routing
+          'draft', // for immer
+          'req', // for Express requests
+          'request', // for Express requests
+          'res', // for Express responses
+          'response', // for Express responses
+        ],
+      },
+    ],
     'no-plusplus': 'off',
     'padding-line-between-statements': [
       'warn',
@@ -131,10 +160,10 @@ module.exports = {
         groups: [
           ['^\\u0000'], // Side effect imports
           ['^react$', '^react-dom$', '^react', '^@?\\w'],
-          ['^src/modules'],
-          ['^src'],
-          ['^src/components', '^src/containers', '^src/routes'],
-          ['^src/types'],
+          ['^(src/)?modules'],
+          ['^(src/)?config', '^(src/)?actions', '^(src/)?reducers', '^(src/)?sagas'],
+          ['^(src/)?components', '^(src/)?containers', '^(src/)?routes'],
+          ['^(src/)?types'],
           ['^test'],
           ['^\\./[^.]'], // './*'
           ['^\\.\\./'], // '../*'
