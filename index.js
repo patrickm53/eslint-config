@@ -118,6 +118,7 @@ module.exports = {
       },
     ],
     'no-plusplus': 'off',
+    'no-restricted-syntax': ['error', 'LabeledStatement', 'WithStatement'],
     'padding-line-between-statements': [
       'warn',
       { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
@@ -145,8 +146,10 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-sort-props': ['warn', { reservedFirst: true }],
     'react/no-array-index-key': 'warn',
+    'react/no-unescaped-entities': 'off',
     'react/prefer-stateless-function': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/state-in-constructor': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': [
       'warn',
