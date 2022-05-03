@@ -23,6 +23,7 @@ const reactRules = {
   'react/jsx-sort-props': ['warn', { reservedFirst: true }],
   'react/no-array-index-key': 'warn',
   'react/no-unescaped-entities': 'off',
+  'react/no-unused-prop-types': 'warn',
   'react/prefer-stateless-function': 'off',
   'react/react-in-jsx-scope': 'off',
   'react/state-in-constructor': 'off',
