@@ -65,7 +65,7 @@ const typescriptRules = {
 const unicornRules = {
   'unicorn/better-regex': 'warn',
   'unicorn/catch-error-name': 'warn',
-  'unicorn/consistent-function-scoping': 'warn',
+  'unicorn/consistent-function-scoping': ['warn', { checkArrowFunctions: false }],
   'unicorn/custom-error-definition': 'warn',
   'unicorn/empty-brace-spaces': 'warn',
   'unicorn/no-array-push-push': 'warn',
