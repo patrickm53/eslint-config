@@ -241,11 +241,12 @@ module.exports = {
           ['^\\u0000'], // Side effect imports
           [`^(${require('module').builtinModules.join('|')})(/|$)`],
           ['^react$', '^react-dom$', '^react', '^@?(?!test/)\\w'],
+          ['^~$'],
           ['^~/modules'],
           ['^~/config'],
           ['^~/actions', '^~/literals', '^~/reducers', '^~/services', '^~/sagas'],
           ['^~/components', '^~/containers', '^~/routes'],
-          ['^~'],
+          ['^~', '^src'],
           ['^test/\\w'],
           ['^\\./[^.]'], // './*'
           ['^\\.\\./'], // '../*'
