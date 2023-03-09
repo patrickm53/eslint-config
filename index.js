@@ -172,11 +172,11 @@ module.exports = {
       files: ['**/*.ts?(x)'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
-        ecmaVersion: 2020,
-        sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
         },
+        ecmaVersion: 2022,
+        sourceType: 'module',
       },
       extends: [
         'plugin:import/typescript',
