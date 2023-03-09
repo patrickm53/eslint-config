@@ -6,15 +6,35 @@ Shared [ESLint](https://eslint.org/) configuration.
 
 ## Setup
 
-1. Install the package.
+Install the package:
+
 ```sh
 $ npm install -D @gilbarbara/eslint-config
 ```
 
-2. Add `"extends": ["@gilbarbara/eslint-config"]` to your .eslintrc
+Update your eslint configuration:
+
+```json
+{
+  "extends": ["@gilbarbara/eslint-config"]
+}
+```
 
 [Read more on shared configurations.](https://eslint.org/docs/user-guide/configuring/#extending-configuration-files)
 
 ## Extras
 
-This configuration is intended to provide consistent rules and pairs well with [prettier-config](https://github.com/gilbarbara/prettier-config).
+If you want to get stricter TypeScript rules, this package also exports a `type-checking` module that you can use to extends your config:
+
+```json
+{
+  "extends": [
+    "@gilbarbara/eslint-config",
+    "@gilbarbara/eslint-config/type-checking"
+  ]
+}
+```
+
+---
+
+This configuration is intended to provide consistent rules and pairs well with the [prettier-config](https://github.com/gilbarbara/prettier-config) package.
