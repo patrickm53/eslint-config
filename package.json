@@ -13,7 +13,8 @@
   "homepage": "https://github.com/gilbarbara/eslint-config",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "type-checking.js"
   ],
   "keywords": [
     "eslint",
