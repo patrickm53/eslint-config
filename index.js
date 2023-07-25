@@ -1,3 +1,65 @@
+const baseRules = {
+  curly: ['error', 'all'],
+  'global-require': 'off',
+  'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
+  'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 5 }],
+  'no-else-return': ['error', { allowElseIf: true }],
+  'no-param-reassign': [
+    'error',
+    {
+      props: true,
+      ignorePropertyModificationsFor: [
+        'acc', // for reduce accumulators
+        'accumulator', // for reduce accumulators
+        'e', // for events
+        'event', // for events / AWS Lambdas
+        'el', // for HTMLElements
+        'element', // for HTMLElements
+        'ctx', // for Koa routing
+        'context', // for Koa routing
+        'draft', // for immer
+        'req', // for Express requests
+        'request', // for Express requests
+        'res', // for Express responses
+        'response', // for Express responses
+      ],
+    },
+  ],
+  'no-plusplus': 'off',
+  'no-restricted-syntax': ['error', 'LabeledStatement', 'WithStatement'],
+  'padding-line-between-statements': [
+    'warn',
+    { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+    { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
+    { blankLine: 'always', prev: 'block-like', next: '*' },
+    { blankLine: 'always', prev: '*', next: 'block-like' },
+    { blankLine: 'never', prev: 'case', next: 'block-like' },
+    { blankLine: 'always', prev: '*', next: 'return' },
+  ],
+  'jsx-a11y/control-has-associated-label': 'warn',
+  'simple-import-sort/imports': [
+    'error',
+    {
+      groups: [
+        ['^\\u0000'], // Side effect imports
+        ['^node', `^(${require('module').builtinModules.join('|')})(/|$)`],
+        ['^react$', '^react-dom$', '^react', '^@?(?!test/)\\w'],
+        ['^~$'],
+        ['^~/config'],
+        ['^~/hooks'],
+        ['^~/modules'],
+        ['^~/actions', '^~/literals', '^~/reducers', '^~/services', '^~/sagas'],
+        ['^~/components', '^~/containers', '^~/routes'],
+        ['^~', '^src'],
+        ['^test/\\w'],
+        ['^\\./[^.]'], // './*'
+        ['^\\.\\./'], // '../*'
+      ],
+    },
+  ],
+  'sort-destructure-keys/sort-destructure-keys': ['error', { caseSensitive: false }],
+};
+
 const importRules = {
   'import/extensions': [
     'warn',
@@ -29,6 +91,13 @@ const reactRules = {
   'react/react-in-jsx-scope': 'off',
   'react/state-in-constructor': 'off',
   'react/static-property-placement': 'off',
+  'react-hooks/rules-of-hooks': 'error',
+  'react-hooks/exhaustive-deps': [
+    'warn',
+    {
+      additionalHooks: 'useUpdateEffect',
+    },
+  ],
 };
 
 const typescriptRules = {
@@ -46,6 +115,7 @@ const typescriptRules = {
   '@typescript-eslint/no-var-requires': 'off',
   '@typescript-eslint/no-explicit-any': 'off',
   '@typescript-eslint/consistent-type-assertions': 'warn',
+  '@typescript-eslint/member-ordering': ['error', { default: { order: 'natural' } }],
   'no-array-constructor': 'off',
   '@typescript-eslint/no-array-constructor': 'warn',
   '@typescript-eslint/no-use-before-define': [
@@ -178,11 +248,7 @@ module.exports = {
         ecmaVersion: 2022,
         sourceType: 'module',
       },
-      extends: [
-        'plugin:import/typescript',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:typescript-sort-keys/recommended',
-      ],
+      extends: ['plugin:import/typescript', 'plugin:@typescript-eslint/recommended'],
       rules: {
         ...typescriptRules,
         'react/default-props-match-prop-types': 'off',
@@ -192,72 +258,7 @@ module.exports = {
     },
   ],
   rules: {
-    curly: ['error', 'all'],
-    'global-require': 'off',
-    'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
-    'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 5 }],
-    'no-else-return': ['error', { allowElseIf: true }],
-    'no-param-reassign': [
-      'error',
-      {
-        props: true,
-        ignorePropertyModificationsFor: [
-          'acc', // for reduce accumulators
-          'accumulator', // for reduce accumulators
-          'e', // for events
-          'event', // for events / AWS Lambdas
-          'el', // for HTMLElements
-          'element', // for HTMLElements
-          'ctx', // for Koa routing
-          'context', // for Koa routing
-          'draft', // for immer
-          'req', // for Express requests
-          'request', // for Express requests
-          'res', // for Express responses
-          'response', // for Express responses
-        ],
-      },
-    ],
-    'no-plusplus': 'off',
-    'no-restricted-syntax': ['error', 'LabeledStatement', 'WithStatement'],
-    'padding-line-between-statements': [
-      'warn',
-      { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
-      { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
-      { blankLine: 'always', prev: 'block-like', next: '*' },
-      { blankLine: 'always', prev: '*', next: 'block-like' },
-      { blankLine: 'never', prev: 'case', next: 'block-like' },
-      { blankLine: 'always', prev: '*', next: 'return' },
-    ],
-    'jsx-a11y/control-has-associated-label': 'warn',
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': [
-      'warn',
-      {
-        additionalHooks: 'useUpdateEffect',
-      },
-    ],
-    'simple-import-sort/imports': [
-      'error',
-      {
-        groups: [
-          ['^\\u0000'], // Side effect imports
-          ['^node', `^(${require('module').builtinModules.join('|')})(/|$)`],
-          ['^react$', '^react-dom$', '^react', '^@?(?!test/)\\w'],
-          ['^~$'],
-          ['^~/config'],
-          ['^~/hooks'],
-          ['^~/modules'],
-          ['^~/actions', '^~/literals', '^~/reducers', '^~/services', '^~/sagas'],
-          ['^~/components', '^~/containers', '^~/routes'],
-          ['^~', '^src'],
-          ['^test/\\w'],
-          ['^\\./[^.]'], // './*'
-          ['^\\.\\./'], // '../*'
-        ],
-      },
-    ],
-    'sort-destructure-keys/sort-destructure-keys': ['error', { caseSensitive: false }],
+    ...baseRules,
     ...importRules,
     ...reactRules,
     ...unicornRules,
