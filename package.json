@@ -11,10 +11,11 @@
     "url": "https://github.com/gilbarbara/eslint-config/issues"
   },
   "homepage": "https://github.com/gilbarbara/eslint-config",
-  "main": "src/index.js",
+  "main": "index.js",
+  "module": "index.js",
   "files": [
-    "src/index.js",
-    "src/type-checking.js"
+    "index.js",
+    "type-checking.js"
   ],
   "keywords": [
     "eslint",
