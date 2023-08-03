@@ -89,6 +89,19 @@ const reactRules = {
   'react/no-unused-prop-types': 'warn',
   'react/prefer-stateless-function': 'off',
   'react/react-in-jsx-scope': 'off',
+  'react/sort-comp': [
+    'error',
+    {
+      order: [
+        'static-methods',
+        'instance-variables',
+        'lifecycle',
+        'everything-else',
+        '/^on.+$/',
+        'render',
+      ],
+    },
+  ],
   'react/state-in-constructor': 'off',
   'react/static-property-placement': 'off',
   'react-hooks/rules-of-hooks': 'error',
@@ -115,7 +128,14 @@ const typescriptRules = {
   '@typescript-eslint/no-var-requires': 'off',
   '@typescript-eslint/no-explicit-any': 'off',
   '@typescript-eslint/consistent-type-assertions': 'warn',
-  '@typescript-eslint/member-ordering': ['error', { default: { order: 'natural' } }],
+  '@typescript-eslint/member-ordering': [
+    'error',
+    {
+      default: { order: 'as-written' },
+      interfaces: { order: 'natural' },
+      typeLiterals: { order: 'natural' },
+    },
+  ],
   'no-array-constructor': 'off',
   '@typescript-eslint/no-array-constructor': 'warn',
   '@typescript-eslint/no-use-before-define': [
