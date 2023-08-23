@@ -122,6 +122,15 @@ const typescriptRules = {
   'no-use-before-define': 'off',
   'space-before-function-paren': 'off',
   '@typescript-eslint/ban-ts-comment': 'off',
+  '@typescript-eslint/ban-types': [
+    'error',
+    {
+      types: {
+        '{}': false,
+      },
+      extendDefaults: true,
+    },
+  ],
   '@typescript-eslint/no-inferrable-types': ['error', { ignoreParameters: true }],
   '@typescript-eslint/explicit-function-return-type': 'off',
   '@typescript-eslint/explicit-module-boundary-types': 'off',
