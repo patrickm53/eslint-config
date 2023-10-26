@@ -252,6 +252,9 @@ module.exports = {
       },
       typescript: {},
     },
+    jest: {
+      version: 29,
+    },
   },
   overrides: [
     {
@@ -292,5 +295,6 @@ module.exports = {
     ...importRules,
     ...reactRules,
     ...unicornRules,
+    'no-deprecated-functions': 'off',
   },
 };
