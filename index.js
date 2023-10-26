@@ -286,6 +286,7 @@ module.exports = {
       },
     },
   ],
+  reportUnusedDisableDirectives: true,
   rules: {
     ...baseRules,
     ...importRules,
