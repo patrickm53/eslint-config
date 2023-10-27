@@ -1,6 +1,6 @@
 {
   "name": "@gilbarbara/eslint-config",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "Shared ESLint config",
   "author": "Gil Barbara <gilbarbara@gmail.com>",
   "repository": {
