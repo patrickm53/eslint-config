@@ -29,7 +29,7 @@ If you don't need React, use `@gilbarbara/eslint-config/base`
 Includes the `base` and `react` rules.
 
 **@gilbarbara/eslint-config/base**  
-Includes ESLint,  [Airbnb Base](https://www.npmjs.com/package/eslint-config-airbnb-base), [Import](https://www.npmjs.com/package/eslint-plugin-import), [Prettier](https://www.npmjs.com/package/eslint-plugin-prettier), [Simple Import Sort](https://www.npmjs.com/package/eslint-plugin-simple-import-sort), [Sort Destructure Keys](https://www.npmjs.com/package/eslint-plugin-sort-destructure-keys), [Stylistic](https://www.npmjs.com/package/@stylistic/eslint-plugin-js), [TypeScript](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin), and [Unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn) rules.
+Includes ESLint,  [Airbnb Base](https://www.npmjs.com/package/eslint-config-airbnb-base), [Import](https://www.npmjs.com/package/eslint-plugin-import), [Prettier](https://www.npmjs.com/package/eslint-plugin-prettier), [Simple Import Sort](https://www.npmjs.com/package/eslint-plugin-simple-import-sort), [Sort Destructure Keys](https://www.npmjs.com/package/eslint-plugin-sort-destructure-keys), [TypeScript](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin), and [Unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn) rules.
 
 **@gilbarbara/eslint-config/jest**  
 Includes [Jest](https://www.npmjs.com/package/eslint-plugin-jest) and [Jest DOM](https://www.npmjs.com/package/eslint-plugin-jest-dom) rules.

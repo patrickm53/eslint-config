@@ -17,9 +17,6 @@ dependencies:
   '@babel/preset-react':
     specifier: ^7.22.15
     version: 7.22.15(@babel/core@7.23.2)
-  '@stylistic/eslint-plugin':
-    specifier: ^0.1.1
-    version: 0.1.1(eslint@8.52.0)(typescript@5.2.2)
   '@typescript-eslint/eslint-plugin':
     specifier: ^6.9.0
     version: 6.9.0(@typescript-eslint/parser@6.9.0)(eslint@8.52.0)(typescript@5.2.2)
@@ -1116,60 +1113,6 @@ packages:
     resolution: {integrity: sha512-V4BG07kuYSUkTCSBHG8G8TNhM+F19jXFWnQtzj+we8DrkpSBCee9Z3Ms8yiGer/dlmhe35/Xdgyo3/0rQKg7YA==}
     dependencies:
       '@sinonjs/commons': 3.0.0
-
-  /@stylistic/eslint-plugin-js@0.1.1(eslint@8.52.0):
-    resolution: {integrity: sha512-gZbT/Sqz1viW+87YaGrzosjI54IIAwGuYE+5AgXO1C9zGMLpxDroyU+HpcqVSynN5Nihuaocp89UU49nCJh9KA==}
-    dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@8.52.0)
-      acorn: 8.10.0
-      escape-string-regexp: 4.0.0
-      eslint-visitor-keys: 3.4.3
-      espree: 9.6.1
-      esutils: 2.0.3
-      graphemer: 1.4.0
-    transitivePeerDependencies:
-      - eslint
-    dev: false
-
-  /@stylistic/eslint-plugin-jsx@0.1.1(eslint@8.52.0):
-    resolution: {integrity: sha512-36+iAWxGIAwGb2k7vS4S14NIt/2NVBCJSn3Q+T91t4MF1fWyaQFOoc5l6c4oW5UTzfr0vgMMcqsr8f8JJjqm0g==}
-    dependencies:
-      '@stylistic/eslint-plugin-js': 0.1.1(eslint@8.52.0)
-      estraverse: 5.3.0
-      jsx-ast-utils: 3.3.5
-    transitivePeerDependencies:
-      - eslint
-    dev: false
-
-  /@stylistic/eslint-plugin-ts@0.1.1(eslint@8.52.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-mJHYWzljqrDykOop60nyCAXRp4LLstfNQWXxubJFMOz5tlAoqd2Mex60TCa/fctPhaOd36f/lu1CuU9WgFh+DA==}
-    peerDependencies:
-      eslint: '*'
-    dependencies:
-      '@stylistic/eslint-plugin-js': 0.1.1(eslint@8.52.0)
-      '@typescript-eslint/scope-manager': 6.9.0
-      '@typescript-eslint/type-utils': 6.9.0(eslint@8.52.0)(typescript@5.2.2)
-      '@typescript-eslint/utils': 6.9.0(eslint@8.52.0)(typescript@5.2.2)
-      eslint: 8.52.0
-      graphemer: 1.4.0
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: false
-
-  /@stylistic/eslint-plugin@0.1.1(eslint@8.52.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-pOuT7q5XOain+YBExC7vHHSWEmvp2Z9/v1HTuYjy+EzvZkv7w8pXlC44qmO14G8A5uVaUp3CZtNzTvT2h4Ilaw==}
-    peerDependencies:
-      eslint: '*'
-    dependencies:
-      '@stylistic/eslint-plugin-js': 0.1.1(eslint@8.52.0)
-      '@stylistic/eslint-plugin-jsx': 0.1.1(eslint@8.52.0)
-      '@stylistic/eslint-plugin-ts': 0.1.1(eslint@8.52.0)(typescript@5.2.2)
-      eslint: 8.52.0
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: false
 
   /@types/babel__core@7.20.1:
     resolution: {integrity: sha512-aACu/U/omhdk15O4Nfb+fHgH/z3QsfQzpnvRZhYhThms83ZnAOZz7zZAWO7mn2yyNQaA4xTO8GLK3uqFU4bYYw==}

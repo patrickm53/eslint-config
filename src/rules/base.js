@@ -1,8 +1,8 @@
 module.exports = {
   curly: ['error', 'all'],
   'global-require': 'off',
-  '@stylistic/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
-  '@stylistic/newline-per-chained-call': ['warn', { ignoreChainWithDepth: 5 }],
+  'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
+  'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 5 }],
   'no-else-return': ['error', { allowElseIf: true }],
   'no-param-reassign': [
     'error',
@@ -27,7 +27,7 @@ module.exports = {
   ],
   'no-plusplus': 'off',
   'no-restricted-syntax': ['error', 'LabeledStatement', 'WithStatement'],
-  '@stylistic/padding-line-between-statements': [
+  'padding-line-between-statements': [
     'warn',
     { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
     { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },

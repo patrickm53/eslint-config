@@ -10,13 +10,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  plugins: [
-    '@babel',
-    '@stylistic/eslint-plugin',
-    'simple-import-sort',
-    'sort-destructure-keys',
-    'unicorn',
-  ],
+  plugins: ['@babel', 'simple-import-sort', 'sort-destructure-keys', 'unicorn'],
   parserOptions: {
     ecmaVersion: 2022,
     sourceType: 'module',

@@ -52,7 +52,6 @@
     "@babel/eslint-parser": "^7.22.15",
     "@babel/eslint-plugin": "^7.22.10",
     "@babel/preset-react": "^7.22.15",
-    "@stylistic/eslint-plugin": "^0.1.1",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
     "eslint": "^8.52.0",
