@@ -3,6 +3,7 @@ module.exports = {
   'react/function-component-definition': ['error', { namedComponents: 'function-declaration' }],
   'react/jsx-filename-extension': 'off',
   'react/jsx-fragments': 'off',
+  'react/jsx-indent': 'off',
   'react/jsx-one-expression-per-line': 'off',
   'react/jsx-props-no-spreading': 'off',
   'react/jsx-sort-props': ['warn', { reservedFirst: true }],

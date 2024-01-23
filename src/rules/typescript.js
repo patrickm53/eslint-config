@@ -25,7 +25,7 @@ module.exports = {
     'error',
     {
       default: { order: 'as-written' },
-      interfaces: { order: 'natural' },
+      interfaces: { memberTypes: ['signature', 'field'], order: 'natural' },
       typeLiterals: { order: 'natural' },
     },
   ],
