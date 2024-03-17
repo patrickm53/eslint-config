@@ -17,6 +17,7 @@ module.exports = {
     'error',
     {
       order: [
+        'constructor',
         'static-methods',
         'instance-variables',
         'lifecycle',
