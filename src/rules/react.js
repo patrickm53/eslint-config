@@ -1,6 +1,7 @@
 module.exports = {
   'jsx-a11y/control-has-associated-label': 'warn',
   'react/function-component-definition': ['error', { namedComponents: 'function-declaration' }],
+  'react/jsx-curly-newline': 'off',
   'react/jsx-filename-extension': 'off',
   'react/jsx-fragments': 'off',
   'react/jsx-indent': 'off',
