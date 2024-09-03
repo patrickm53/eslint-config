@@ -6,15 +6,6 @@ module.exports = {
   'no-undef': 'off',
   'no-use-before-define': 'off',
   '@typescript-eslint/ban-ts-comment': 'off',
-  '@typescript-eslint/ban-types': [
-    'error',
-    {
-      types: {
-        '{}': false,
-      },
-      extendDefaults: true,
-    },
-  ],
   '@typescript-eslint/no-inferrable-types': ['error', { ignoreParameters: true }],
   '@typescript-eslint/explicit-function-return-type': 'off',
   '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -32,6 +23,7 @@ module.exports = {
   ],
   'no-array-constructor': 'off',
   '@typescript-eslint/no-array-constructor': 'warn',
+  '@typescript-eslint/no-unsafe-function-type': 'error',
   '@typescript-eslint/no-use-before-define': [
     'warn',
     { functions: false, classes: false, variables: false, typedefs: false },
@@ -45,4 +37,5 @@ module.exports = {
   '@typescript-eslint/no-unused-vars': ['warn', { args: 'none', ignoreRestSiblings: true }],
   'no-useless-constructor': 'off',
   '@typescript-eslint/no-useless-constructor': 'warn',
+  '@typescript-eslint/no-wrapper-object-types': 'error',
 };

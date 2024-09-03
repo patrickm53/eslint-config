@@ -1,6 +1,8 @@
+const vitest = require('@vitest/eslint-plugin');
+
 module.exports = {
-  extends: ['plugin:vitest/recommended'],
   rules: {
+    ...vitest.configs.recommended.rules,
     'vitest/consistent-test-it': 'warn',
     'vitest/no-alias-methods': 'warn',
     'vitest/no-conditional-expect': 'warn',
