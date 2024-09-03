@@ -1,17 +1,8 @@
 module.exports = {
-  // TypeScript's `noFallthroughCasesInSwitch` option is more robust (#6906)
-  'default-case': 'off',
-  'valid-jsdoc': 'off',
-  'no-dupe-class-members': 'off',
-  'no-undef': 'off',
-  'no-use-before-define': 'off',
   '@typescript-eslint/ban-ts-comment': 'off',
-  '@typescript-eslint/no-inferrable-types': ['error', { ignoreParameters: true }],
+  '@typescript-eslint/consistent-type-assertions': 'warn',
   '@typescript-eslint/explicit-function-return-type': 'off',
   '@typescript-eslint/explicit-module-boundary-types': 'off',
-  '@typescript-eslint/no-var-requires': 'off',
-  '@typescript-eslint/no-explicit-any': 'off',
-  '@typescript-eslint/consistent-type-assertions': 'warn',
   '@typescript-eslint/member-ordering': [
     'error',
     {
@@ -21,21 +12,34 @@ module.exports = {
       typeLiterals: { order: 'natural' },
     },
   ],
-  'no-array-constructor': 'off',
   '@typescript-eslint/no-array-constructor': 'warn',
-  '@typescript-eslint/no-unsafe-function-type': 'error',
-  '@typescript-eslint/no-use-before-define': [
-    'warn',
-    { functions: false, classes: false, variables: false, typedefs: false },
+  '@typescript-eslint/no-empty-object-type': [
+    'error',
+    { allowInterfaces: 'with-single-extends', allowWithName: 'Props$' },
   ],
-  'no-unused-expressions': 'off',
+  '@typescript-eslint/no-explicit-any': 'off',
+  '@typescript-eslint/no-inferrable-types': ['error', { ignoreParameters: true }],
+  '@typescript-eslint/no-unsafe-function-type': 'error',
   '@typescript-eslint/no-unused-expressions': [
     'error',
     { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true },
   ],
-  'no-unused-vars': 'off',
   '@typescript-eslint/no-unused-vars': ['warn', { args: 'none', ignoreRestSiblings: true }],
-  'no-useless-constructor': 'off',
+  '@typescript-eslint/no-use-before-define': [
+    'warn',
+    { functions: false, classes: false, variables: false, typedefs: false },
+  ],
   '@typescript-eslint/no-useless-constructor': 'warn',
+  '@typescript-eslint/no-var-requires': 'off',
   '@typescript-eslint/no-wrapper-object-types': 'error',
+  // TypeScript's `noFallthroughCasesInSwitch` option is more robust (#6906)
+  'default-case': 'off',
+  'no-array-constructor': 'off',
+  'no-dupe-class-members': 'off',
+  'no-undef': 'off',
+  'no-unused-expressions': 'off',
+  'no-unused-vars': 'off',
+  'no-use-before-define': 'off',
+  'no-useless-constructor': 'off',
+  'valid-jsdoc': 'off',
 };
